@@ -60,6 +60,10 @@ def getPetDetails(id):
         pet_instance["comments"] = doc["comments"]
         return pet_instance
 
+@apps.route("/")
+def home():
+    return render_template("index.html")
+
 @app.route("/pets/<id>")
 def getPetPic(id):
     selector = {'_id': {'$eq': id}}
