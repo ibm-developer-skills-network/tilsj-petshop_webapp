@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-databaseName = os.environ["databaseName"]
+databaseName = "pets-database"
 account_user_name = os.environ["account_user_name"]
 apikey = os.environ["apikey"]
 
@@ -60,7 +60,7 @@ def getPetDetails(id):
         pet_instance["comments"] = doc["comments"]
         return pet_instance
 
-@apps.route("/")
+@app.route("/")
 def home():
     return render_template("index.html")
 
