@@ -41,7 +41,7 @@ def main():
 
          # Create a document by using the Database API.
         newDocument = myDatabaseDemo.create_document(jsonDocument)
-        path = "pet_pics/"+document['filename']
+        path = "./"+document['filename']
         with open(path, 'rb') as f:
             contents = f.read()
         newDocument.put_attachment(filename, "image/jpg", contents, headers={})
