@@ -14,7 +14,7 @@ load_dotenv()
 
 account_user_name = os.environ["account_user_name"]
 apikey = os.environ["apikey"]
-databaseName = os.environ["pets-database"]
+databaseName = "pets-database"
 
 
 def main():
