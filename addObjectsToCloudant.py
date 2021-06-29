@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-account_user_name = os.environ["account_user_name"]
+account_user_name = os.environ["account_name"]
 apikey = os.environ["apikey"]
 databaseName = "pets-database"
 
