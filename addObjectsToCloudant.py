@@ -28,7 +28,7 @@ def main():
         age = document['age']
         breed = document['breed']
         comments = document['comments']
-        filename = document['filename']
+        image_url = document['image_url']
 
         jsonDocument = {
                 "kind": kind,
@@ -36,15 +36,10 @@ def main():
                 "age": age,
                 "breed": breed,
                 "comments": comments,
-                "filename": filename
+                "image_url": image_url
             }
 
-         # Create a document by using the Database API.
         newDocument = myDatabaseDemo.create_document(jsonDocument)
-        path = "pet_pics/"+document['filename']
-        with open(path, 'rb') as f:
-            contents = f.read()
-        newDocument.put_attachment(filename, "image/jpg", contents, headers={})
 
 if __name__=='__main__':
     main()
